@@ -1,0 +1,17 @@
+{
+  "name": "worker_cli",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf ./dist && bun build --compile --sourcemap ./src/index.ts --outfile ./dist/replicant-worker --target=bun-linux-x64-modern --overwrite",
+    "format": "prettier --write ./src/*.ts"
+  },
+  "dependencies": {
+    "worker_sdk": "../worker_sdk/",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "rimraf": "^5.0.7",
+    "prettier": "^3.2.5"
+  }
+}
